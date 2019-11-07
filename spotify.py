@@ -7,25 +7,39 @@ import requests
 class spotifyClient():
     #Spotify URLS
     SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
-    REDIR_URL = "https%3A%2F%2Fexample.com%2Fcallback"    
+    REDIR_URL = "https://www.example.com/callback"    
 
 
     def authorize(self, clientInfo):
-        url =  self.SPOTIFY_AUTH_URL + "?client_id=" + clientInfo[0] + '&response_type=code' + '&redirect_uri=' + self.REDIR_URL + '&scope=' +  'user-library-modify' + '%20' + 'user-modify-playback-state' + '%20' + 'playlist-modify-private'
+        payload = {
+            'username': 'xxxx',
+            'password': 'xxxx'
+        }
+
+        r = requests.Session()
+
+        scopes = 'user-library-modify user-modify-playback-state playlist-modify-private'
         
-        r = requests.get( 
+        url =  self.SPOTIFY_AUTH_URL + "?client_id=" + clientInfo[0] + '&response_type=code' + '&redirect_uri=' + urllib.parse.quote(self.REDIR_URL.encode("utf-8")) + '&scope=' + urllib.parse.quote(scopes.encode("utf-8"))
+        
+        respo = r.get( 
             url,
             headers={
-            'client_id': clientInfo[0],
+            'client_id': clientInfo[0]
             }
         )
 
+    
+        respo = r.post(respo, data=payload).url
+        r = r.get(url,
+            headers={
+            'client_id': clientInfo[0]
+            })
+        print(r.text)   #or whatever else you want to do with the request data!
 
-        print(url)
-        print()
-        print(r.url)
-        print()
-        #print(urllib.parse.urlparse(r.url))
-        
+
+        #print(urllib.parse.urlparse(respo.url))
+        print("------------------")
+
         #print(url)
         #print(request.status)

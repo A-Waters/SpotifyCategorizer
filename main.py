@@ -1,15 +1,32 @@
 import pyaudio
 import numpy as np
-import urllib
+import spotify
 
 
 
-def getToken(token):
-    f =  open("tokenID.txt, r")
-    token = f.read()
+
+
+
+
+
+
+def getTokens():
+    f =  open("clientID.txt")
+    ClientInfo = ['null' , 'null']
+    ClientInfo[0] = f.readline()
+    ClientInfo[0] = ClientInfo[0][0:len(ClientInfo[0])-1]
+    ClientInfo[1] = f.readline()
+
+    f.close()
+    return ClientInfo
 
 
 if __name__ == "__main__":
-    tokenID = ""
-    getToken(tokenID)
+    ClientInfo = getTokens()
+    SpoClient = spotify.spotifyClient()
+    SpoClient.authorize(ClientInfo)
     
+    
+
+
+
