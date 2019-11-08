@@ -7,7 +7,7 @@ import requests
 class spotifyClient():
     #Spotify URLS
     SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
-    REDIR_URL = "https://www.example.com/callback"    
+    REDIR_URL = "https://example.com/callback/"    
 
 
     def authorize(self, clientInfo):
@@ -20,18 +20,19 @@ class spotifyClient():
 
         scopes = 'user-library-modify user-modify-playback-state playlist-modify-private'
         
-        url =  self.SPOTIFY_AUTH_URL + "?client_id=" + clientInfo[0] + '&response_type=code' + '&redirect_uri=' + urllib.parse.quote(self.REDIR_URL.encode("utf-8")) + '&scope=' + urllib.parse.quote(scopes.encode("utf-8"))
+        url =  self.SPOTIFY_AUTH_URL + "?client_id=" + clientInfo[0] + '&response_type=token' + '&redirect_uri=' + urllib.parse.quote(self.REDIR_URL.encode("utf-8")) + '&scope=' + urllib.parse.quote(scopes.encode("utf-8"))
         
-
         print(url)
-        respo = r.get( 
+        respo = requests.get( 
             url,
             headers={
-            'client_id': clientInfo[0]
+                'client_id': clientInfo[0]
             }
-        ).text
+        )
+
+        print(respo.url)
     
-        #respo = r.post(respo, data=payload).url
+        respo = r.post(respo.url, data=payload)
        
         #print(urllib.parse.urlparse(respo.url))
         print("------------------")
