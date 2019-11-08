@@ -1,0 +1,109 @@
+{
+	'added_at': '2019-10-30T19:03:28Z',
+	'track': 
+	{
+	 	'album': 
+	 	{
+	 		'album_type': 'album', 
+	 		'artists': 
+	 		[
+		 		{
+		 			'external_urls': 
+		 			{
+		 				'spotify': 'https://open.spotify.com/artist/6QrQ7OrISRYIfS5mtacaw2'
+		 			}, 
+		 			'href': 'https://api.spotify.com/v1/artists/6QrQ7OrISRYIfS5mtacaw2', 
+		 			'id': '6QrQ7OrISRYIfS5mtacaw2', 
+		 			'name': 'Jaymes Young', 
+		 			'type': 'artist', 
+		 			'uri': 'spotify:artist:6QrQ7OrISRYIfS5mtacaw2'
+		 		}
+	 		], 
+ 			'available_markets': 
+ 			[
+ 				'AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'
+ 			], 
+ 			
+ 			'external_urls': 
+ 			{
+ 				'spotify': 'https://open.spotify.com/album/6MuWCR3WPjwyKhqsTKLZ3z'
+			}, 
+			
+			'href': 'https://api.spotify.com/v1/albums/6MuWCR3WPjwyKhqsTKLZ3z',
+			'id': '6MuWCR3WPjwyKhqsTKLZ3z',
+			'images': 
+			
+			[
+				{
+					'height': 640,
+					'url': 'https://i.scdn.co/image/ab67616d0000b273a9897f65d1ead1be10a51e3f', 
+					'width': 640
+				},
+
+				{
+					'height': 300, 
+					'url': 'https://i.scdn.co/image/ab67616d00001e02a9897f65d1ead1be10a51e3f',
+					'width': 300
+				}, 
+
+				{
+					'height': 64,
+					'url': 'https://i.scdn.co/image/ab67616d00004851a9897f65d1ead1be10a51e3f',
+					width': 64
+				}
+			], 
+
+			'name': 'Feel Something', 
+			'release_date': '2017-06-23', 
+			'release_date_precision': 'day', 
+			'total_tracks': 12, 
+			'type': 'album', 
+			'uri': 'spotify:album:6MuWCR3WPjwyKhqsTKLZ3z'
+		},
+
+		'artists': 
+		[
+			{
+				'external_urls': 
+				{
+					'spotify': 'https://open.spotify.com/artist/6QrQ7OrISRYIfS5mtacaw2'
+				}, 
+				'href': 'https://api.spotify.com/v1/artists/6QrQ7OrISRYIfS5mtacaw2', 
+				'id': '6QrQ7OrISRYIfS5mtacaw2', 
+				'name': 
+				'Jaymes Young', 
+				'type': 'artist', 
+				'uri': 'spotify:artist:6QrQ7OrISRYIfS5mtacaw2'
+			}
+		], 
+
+		'available_markets': 
+		[
+			'AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'
+		], 
+
+		'disc_number': 1, 
+		'duration_ms': 204346, 
+		'explicit': False, 
+		
+		'external_ids': 
+		{
+			'isrc': 'USAT21700625'
+		}, 
+		
+		'external_urls': 
+		{
+			'spotify': 'https://open.spotify.com/track/7LJzs1Kr8kW3d6cFTCueNV'
+		}, 
+
+		'href': 'https://api.spotify.com/v1/tracks/7LJzs1Kr8kW3d6cFTCueNV',
+		'id': '7LJzs1Kr8kW3d6cFTCueNV',
+		'is_local': False, 
+		'name': 'Stoned On You', 
+		'popularity': 52, 
+		'preview_url': 'https://p.scdn.co/mp3-preview/55e905b71ace10ae86020d166ac33e74e9b41974?cid=fb37da23233d4fe581300fa8d7c4b3a0',
+		'track_number': 2,
+	 	'type': 'track',
+		'uri': 'spotify:track:7LJzs1Kr8kW3d6cFTCueNV'
+	}
+}
