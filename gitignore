@@ -1,2 +1,5 @@
-__pycache__
-__pycache__/spotify.cpython-36.pyc
+__pycache__/
+
+*.log
+
+logs/
