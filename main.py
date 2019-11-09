@@ -1,6 +1,7 @@
 #import pyaudio
 import numpy as np
 import spotify
+import json
 
 
 if __name__ == "__main__":
@@ -15,9 +16,26 @@ if __name__ == "__main__":
     tempQuery = {"limit": "5"}
     result = SpoClient.getData(usertracks, tempQuery)
 
-    '''for i in result["items"]:
-        print(i["track"]["id"])'''
+    for i in result["items"]:
+        print(i["track"]["id"])
 
-    uhhh = SpoClient.getData(audio_analisys+"7LJzs1Kr8kW3d6cFTCueNV")
-    print(uhhh)
+
+
+    
+
+    data = SpoClient.getData(audio_analisys+"7LJzs1Kr8kW3d6cFTCueNV")
+    
+    for segment in data["segments"]:
+        for DataType in segment:
+            #print(segment[DataType])
+            print("%s { %s }" % (DataType, segment[DataType]))
+        print("--------------------------")
+    
+
+
+
+    '''with open('data.txt', 'w') as outfile:
+        json.dump(data, outfile)
+    print("test")'''
+
  	

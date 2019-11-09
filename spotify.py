@@ -28,7 +28,7 @@ class spotifyClient():
         
         #start browser
         driver = webdriver.Chrome(executable_path=self.WEBDRIVER, options=options)
-        driver.set_window_size(500,1000)
+        driver.set_window_size(500,800)
 
         #load cookies
         if (os.path.exists(self.COOKIES)):
@@ -44,29 +44,25 @@ class spotifyClient():
         
        
         driver.get(url)
-
+        try:
         #while we not at the url
-        while ("access_token=" not in driver.current_url):
-            pass
-        else:       #when we at the url
-            parse = urllib.parse.urlparse(driver.current_url)
-            self.access_token = parse.fragment[13:parse.fragment.find("&")]          #get the accesstoken
-            pickle.dump(driver.get_cookies(), open(self.COOKIES,"wb"))          #save cookies
-            driver.close()                                                      #close driver
-                
-
-
-
+            while ("access_token=" not in driver.current_url):
+                pass
+            else:       #when we at the url
+                parse = urllib.parse.urlparse(driver.current_url)
+                self.access_token = parse.fragment[13:parse.fragment.find("&")]          #get the accesstoken
+                pickle.dump(driver.get_cookies(), open(self.COOKIES,"wb"))              #save cookies
+                driver.close()                                                          #close driver
+        except(TypeError):
+            print("Clinet Closed")
 
 
     def getData(self, url_ented, inquery = None):
         headers = {'Authorization': 'Bearer %s' % self.access_token }
         response = requests.get(self.SPODATA + url_ented, headers=headers, params=inquery)        #get data from spotify
         return response.json()
-    
-        
-        
-                
+
+
 
 
 
