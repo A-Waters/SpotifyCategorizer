@@ -7,9 +7,6 @@ import json
 if __name__ == "__main__":
     SpoClient = spotify.spotifyClient()
     SpoClient.authorize()
-    
-
-
     usertracks = "/v1/me/tracks"
     audio_analisys = "/v1/audio-analysis/"#ID
 
