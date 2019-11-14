@@ -1,0 +1,9 @@
+x:n # of segments
+y:12 # of dp
+z:8 # of data types
+
+x:y:z
+5:5:5
+
+CNN - tirple loss
+

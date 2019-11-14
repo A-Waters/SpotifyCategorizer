@@ -1,6 +1,6 @@
-./__pycache__/
+./__pycache__/Common.cpython-36.pyc
 ./CNN/__pycache__/
 ./.vscode/
 **.log
 ./logs/
-*.pyc
+**.pyc
